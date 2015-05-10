@@ -4,25 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | zhubenshuli&#39;s blog</title>
+    <title>HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+    <meta name="description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/05/05/hello-world/index.html">
+<meta property="og:title" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
+<meta property="og:url" content="http://yoursite.com/2015/05/12/html2canvas使用教程/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
+<meta name="twitter:description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -78,33 +75,52 @@ Quick">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/05/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/05/12/html2canvas使用教程/" title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片" itemprop="url">HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-05T12:41:27.488Z" itemprop="datePublished"> 发表于 2015-05-05</time>
+    <time datetime="2015-05-12T11:25:00.000Z" itemprop="datePublished"> 发表于 2015-05-12</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>html2canvas能够实现在用户浏览器端直接对整个或部分页面进行截屏。这个脚本将当前页面渲染成一个canvas图片，通过读取DOM并将不同的样式应用到这些元素上实现。它不需要来自服务器任何渲染，整张图片都是在客户端浏览器创建。当浏览器不支持Canvas时，将采用Flashcanvas或ExplorerCanvas技术代替实现。以下浏览器能够很好的支持该脚本：Firefox 3.5+, Google Chrome, Opera新的版本, IE9以上的浏览器。  </p>
+<p>如果你想将网页的某一部分或者全部进行截图从而来生成图片保存，那么html2canvas将会是一个很好的选择！</p>
+<p>以下是html2canvas的使用教程：  </p>
+<ol>
+<li>使用jquery插件html2canvas对网页的某一部分截图（根据元素节点，比如id什么的）。  </li>
+<li>将截图到的canvas标签通过toDataURL()方法转成可以传输的base64编码post给后台服务器处理。  </li>
+<li>在后台服务器对传递过来的base64编码处理得到图像并保存。</li>
+</ol>
+<p>代码：<br>1.引用jquery插件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/js/html2canvas.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>2.截图通过ajax传输<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">howuse</span><span class="params">()</span></span>&#123;</span><br><span class="line">        html2canvas(<span class="built_in">document</span>.getElementById(<span class="string">'email_content'</span>), &#123;</span><br><span class="line">            onrendered: <span class="function"><span class="keyword">function</span><span class="params">(canvas)</span></span>&#123;</span><br><span class="line">                <span class="keyword">var</span> html_canvas = canvas.toDataURL();</span><br><span class="line">                $.post(<span class="string">'/report/send_rep_submit'</span>, &#123;html_canvas:html_canvas&#125;, <span class="function"><span class="keyword">function</span><span class="params">(json)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">                &#125;, <span class="string">'json'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">　　&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>3.后台服务器处理<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send_rep_submit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="variable">$html_canvas</span> = <span class="variable">$this</span>-&gt;input-&gt;post(<span class="string">'html_canvas'</span>);</span><br><span class="line">    <span class="variable">$image</span> = base64_decode(substr(<span class="variable">$html_canvas</span>, <span class="number">22</span>));</span><br><span class="line">    header(<span class="string">'Content-Type: image/png'</span>);</span><br><span class="line">    <span class="variable">$filename</span> = <span class="string">"images/report/"</span> . <span class="variable">$id</span> . <span class="string">".png"</span>;</span><br><span class="line">    <span class="variable">$fp</span> = fopen(<span class="variable">$filename</span>, <span class="string">'w'</span>);</span><br><span class="line">    fwrite(<span class="variable">$fp</span>, <span class="variable">$image</span>);</span><br><span class="line">    fclose(<span class="variable">$fp</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/canvas/">canvas</a>
+  </div>
 
 </div>
 
@@ -112,7 +128,7 @@ Quick">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/05/05/hello-world/" data-title="Hello World | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/05/12/html2canvas使用教程/" data-title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -123,6 +139,27 @@ Quick">
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/05/13/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题">
+  <strong>上一篇：</strong><br/>
+  <span>
+  DISTINCT ORDER BY 排序问题</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/05/11/md_intro/"  title="markdown简易文档">
+ <strong>下一篇：</strong><br/> 
+ <span>markdown简易文档
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 
 </div>  
@@ -131,7 +168,7 @@ Quick">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+ 
  
   </div>
 
@@ -140,8 +177,46 @@ Quick">
 <aside class="clearfix">
 
   
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/实战经验/" title="实战经验">实战经验<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/canvas/" title="canvas">canvas<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
