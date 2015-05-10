@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片 | zhubenshuli&#39;s blog</title>
+    <title>DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
+    <meta name="description" content="DISTINCT ORDER BY 排序问题...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
-<meta property="og:url" content="http://yoursite.com/2015/05/12/html2canvas使用教程/index.html">
+<meta property="og:title" content="DISTINCT ORDER BY 排序问题">
+<meta property="og:url" content="http://yoursite.com/2015/05/10/DISTINCT_ORDER_BY排序问题/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
+<meta property="og:description" content="DISTINCT ORDER BY 排序问题...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
-<meta name="twitter:description" content="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...">
+<meta name="twitter:title" content="DISTINCT ORDER BY 排序问题">
+<meta name="twitter:description" content="DISTINCT ORDER BY 排序问题...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/12/html2canvas使用教程/" title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片" itemprop="url">HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片</a>
+      <a href="/2015/05/10/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">DISTINCT ORDER BY 排序问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-12T11:25:00.000Z" itemprop="datePublished"> 发表于 2015-05-12</time>
+    <time datetime="2015-05-10T13:27:00.000Z" itemprop="datePublished"> 发表于 2015-05-10</time>
     
   </p>
 </header>
@@ -95,17 +95,7 @@
 		
 		</div>
 		
-		<p>html2canvas能够实现在用户浏览器端直接对整个或部分页面进行截屏。这个脚本将当前页面渲染成一个canvas图片，通过读取DOM并将不同的样式应用到这些元素上实现。它不需要来自服务器任何渲染，整张图片都是在客户端浏览器创建。当浏览器不支持Canvas时，将采用Flashcanvas或ExplorerCanvas技术代替实现。以下浏览器能够很好的支持该脚本：Firefox 3.5+, Google Chrome, Opera新的版本, IE9以上的浏览器。  </p>
-<p>如果你想将网页的某一部分或者全部进行截图从而来生成图片保存，那么html2canvas将会是一个很好的选择！</p>
-<p>以下是html2canvas的使用教程：  </p>
-<ol>
-<li>使用jquery插件html2canvas对网页的某一部分截图（根据元素节点，比如id什么的）。  </li>
-<li>将截图到的canvas标签通过toDataURL()方法转成可以传输的base64编码post给后台服务器处理。  </li>
-<li>在后台服务器对传递过来的base64编码处理得到图像并保存。</li>
-</ol>
-<p>代码：<br>1.引用jquery插件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/js/html2canvas.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>2.截图通过ajax传输<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">howuse</span><span class="params">()</span></span>&#123;</span><br><span class="line">        html2canvas(<span class="built_in">document</span>.getElementById(<span class="string">'email_content'</span>), &#123;</span><br><span class="line">            onrendered: <span class="function"><span class="keyword">function</span><span class="params">(canvas)</span></span>&#123;</span><br><span class="line">                <span class="keyword">var</span> html_canvas = canvas.toDataURL();</span><br><span class="line">                $.post(<span class="string">'/report/send_rep_submit'</span>, &#123;html_canvas:html_canvas&#125;, <span class="function"><span class="keyword">function</span><span class="params">(json)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">                &#125;, <span class="string">'json'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">　　&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>3.后台服务器处理<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send_rep_submit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="variable">$html_canvas</span> = <span class="variable">$this</span>-&gt;input-&gt;post(<span class="string">'html_canvas'</span>);</span><br><span class="line">    <span class="variable">$image</span> = base64_decode(substr(<span class="variable">$html_canvas</span>, <span class="number">22</span>));</span><br><span class="line">    header(<span class="string">'Content-Type: image/png'</span>);</span><br><span class="line">    <span class="variable">$filename</span> = <span class="string">"images/report/"</span> . <span class="variable">$id</span> . <span class="string">".png"</span>;</span><br><span class="line">    <span class="variable">$fp</span> = fopen(<span class="variable">$filename</span>, <span class="string">'w'</span>);</span><br><span class="line">    fwrite(<span class="variable">$fp</span>, <span class="variable">$image</span>);</span><br><span class="line">    fclose(<span class="variable">$fp</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+		<p>使用类似<code>SELECT DISTINCT `col` FROM `tb_name` ORDER BY `time` DESC</code>这样的sql语句时，会遇到排序问题。<br>以上面的sql语句分析：<code>order by</code>只是针对了获取到的<code>col</code>进行了时间排序，而取到的<code>col</code>则是系统默认排序的。<br>想要<code>order by</code>起效果，应该使用子查询，<code>SELECT DISTINCT `col` FROM (SELECT * FROM `tb_name` ORDER BY `time` DESC) AS a</code>。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -113,13 +103,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+  <a class="article-category-link" href="/categories/实战经验/">实战经验</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/canvas/">canvas</a>
+  <span></span> <a href="/tags/mysql/">mysql</a>
   </div>
 
 </div>
@@ -128,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/05/12/html2canvas使用教程/" data-title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/05/10/DISTINCT_ORDER_BY排序问题/" data-title="DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -141,19 +131,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/05/13/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题">
-  <strong>上一篇：</strong><br/>
-  <span>
-  DISTINCT ORDER BY 排序问题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/05/11/md_intro/"  title="markdown简易文档">
+<a href="/2015/05/07/html2canvas使用教程/"  title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
  <strong>下一篇：</strong><br/> 
- <span>markdown简易文档
+ <span>HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片
 </span>
 </a>
 </div>

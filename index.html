@@ -71,80 +71,244 @@
     <div id="container">
       <div id="main">
 
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/13/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">
-  
-    <h1 itemprop="name">DISTINCT ORDER BY 排序问题</h1>
+   
     
-     
-      <p itemprop="description" >DISTINCT ORDER BY 排序问题...</p>
-      
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
     
-    <time datetime="2015-05-13T11:25:00.000Z" itemprop="datePublished">2015-05-13</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/12/html2canvas使用教程/" title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片" itemprop="url">
-  
-    <h1 itemprop="name">HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片</h1>
+      <a href="/2015/05/10/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">DISTINCT ORDER BY 排序问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-10T13:27:00.000Z" itemprop="datePublished"> 发表于 2015-05-10</time>
     
-     
-      <p itemprop="description" >HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片...</p>
-      
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>使用类似<code>SELECT DISTINCT `col` FROM `tb_name` ORDER BY `time` DESC</code>这样的sql语句时，会遇到排序问题。<br>以上面的sql语句分析：<code>order by</code>只是针对了获取到的<code>col</code>进行了时间排序，而取到的<code>col</code>则是系统默认排序的。<br>想要<code>order by</code>起效果，应该使用子查询，<code>SELECT DISTINCT `col` FROM (SELECT * FROM `tb_name` ORDER BY `time` DESC) AS a</code>。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/实战经验/">实战经验</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/mysql/">mysql</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
     
-    <time datetime="2015-05-12T11:25:00.000Z" itemprop="datePublished">2015-05-12</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/11/md_intro/" title="markdown简易文档" itemprop="url">
-  
-    <h1 itemprop="name">markdown简易文档</h1>
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
     
-     
-      <p itemprop="description" >markdown简易文档...</p>
-      
+      <a href="/2015/05/07/html2canvas使用教程/" title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片" itemprop="url">HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-07T06:21:00.000Z" itemprop="datePublished"> 发表于 2015-05-07</time>
     
-    <time datetime="2015-05-11T11:25:00.000Z" itemprop="datePublished">2015-05-11</time>
-  </a>
-</section>
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>html2canvas能够实现在用户浏览器端直接对整个或部分页面进行截屏。这个脚本将当前页面渲染成一个canvas图片，通过读取DOM并将不同的样式应用到这些元素上实现。它不需要来自服务器任何渲染，整张图片都是在客户端浏览器创建。当浏览器不支持Canvas时，将采用Flashcanvas或ExplorerCanvas技术代替实现。以下浏览器能够很好的支持该脚本：Firefox 3.5+, Google Chrome, Opera新的版本, IE9以上的浏览器。  </p>
+<p>如果你想将网页的某一部分或者全部进行截图从而来生成图片保存，那么html2canvas将会是一个很好的选择！</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/05/07/html2canvas使用教程/#more">阅读更多</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+</div>
 
 
-
-
-
-
+  <div class="article-tags">
   
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/01/hexo_desc/" title="hexo命令教程" itemprop="url">
-  
-    <h1 itemprop="name">hexo命令教程</h1>
+  <span></span> <a href="/tags/canvas/">canvas</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
     
-     
-      <p itemprop="description" >hexo常用命令...</p>
-      
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
     
-    <time datetime="2015-05-01T02:38:16.000Z" itemprop="datePublished">2015-05-01</time>
-  </a>
-</section>
+      <a href="/2015/05/01/md_intro/" title="markdown简易文档" itemprop="url">markdown简易文档</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-01T13:15:00.000Z" itemprop="datePublished"> 发表于 2015-05-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>记录自己平常经常使用的markdown语法</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/05/01/md_intro/#more">阅读更多</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/markdown/">markdown</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/05/01/hexo_desc/" title="hexo命令教程" itemprop="url">hexo命令教程</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-01T02:38:16.000Z" itemprop="datePublished"> 发表于 2015-05-01</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>记录自己经常使用到的hexo命令</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/05/01/hexo_desc/#more">阅读更多</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
 
 
 
