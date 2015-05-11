@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>hexo命令教程 | zhubenshuli&#39;s blog</title>
+    <title>DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="hexo常用命令...">
+    <meta name="description" content="DISTINCT ORDER BY 排序问题...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo命令教程">
-<meta property="og:url" content="http://yoursite.com/2015/05/01/hexo_desc/index.html">
+<meta property="og:title" content="DISTINCT ORDER BY 排序问题">
+<meta property="og:url" content="http://yoursite.com/2015/01/17/DISTINCT_ORDER_BY排序问题/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="hexo常用命令...">
+<meta property="og:description" content="DISTINCT ORDER BY 排序问题...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo命令教程">
-<meta name="twitter:description" content="hexo常用命令...">
+<meta name="twitter:title" content="DISTINCT ORDER BY 排序问题">
+<meta name="twitter:description" content="DISTINCT ORDER BY 排序问题...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/01/hexo_desc/" title="hexo命令教程" itemprop="url">hexo命令教程</a>
+      <a href="/2015/01/17/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">DISTINCT ORDER BY 排序问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-01T02:38:16.000Z" itemprop="datePublished"> 发表于 2015-05-01</time>
+    <time datetime="2015-01-17T13:27:00.000Z" itemprop="datePublished"> 发表于 2015-01-17</time>
     
   </p>
 </header>
@@ -91,30 +91,25 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo_项目部署到_github_上"><span class="toc-number">1.</span> <span class="toc-text">hexo 项目部署到 github 上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用复合命令"><span class="toc-number">2.</span> <span class="toc-text">常用复合命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简写"><span class="toc-number">3.</span> <span class="toc-text">简写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-number">4.</span> <span class="toc-text">常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jacman文章语法"><span class="toc-number">5.</span> <span class="toc-text">jacman文章语法</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>记录自己经常使用到的hexo命令</p>
-<a id="more"></a>
-<h2 id="hexo_项目部署到_github_上">hexo 项目部署到 github 上</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean</span><br><span class="line">hexo generate   <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo deploy     <span class="comment">#将.deploy目录部署到GitHub</span></span><br></pre></td></tr></table></figure>
-<h2 id="常用复合命令">常用复合命令</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> s -g <span class="comment">#生成加预览(本地调试查看)</span></span><br><span class="line">hexo d -g <span class="comment">#生成加部署(上传到服务器)</span></span><br></pre></td></tr></table></figure>
-<h2 id="简写">简写</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="variable">n =</span>= hexo new</span><br><span class="line">hexo <span class="variable">g =</span>= hexo generate     <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="variable">s =</span>= hexo server       <span class="comment">#启动本地服务, 进行文章预览调试</span></span><br><span class="line">hexo <span class="variable">d =</span>= hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="常见问题">常见问题</h2><p>1.hexo deploy命令显示ERROR Deployer not found : github<br>    deploy的type改成git，然后运行下npm install hexo-deployer-git —save</p>
-<h2 id="jacman文章语法">jacman文章语法</h2><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: postName #文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: example #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line"><span class="header">description: 附加一段文章摘要，字数最好在140字以内。</span><br><span class="line">---</span></span><br><span class="line"></span><br><span class="line">以下正文</span><br></pre></td></tr></table></figure>  
+		<p>使用类似<code>SELECT DISTINCT `col` FROM `tb_name` ORDER BY `time` DESC</code>这样的sql语句时，会遇到排序问题。<br>以上面的sql语句分析：<code>order by</code>只是针对了获取到的<code>col</code>进行了时间排序，而取到的<code>col</code>则是系统默认排序的。<br>想要<code>order by</code>起效果，应该使用子查询，<code>SELECT DISTINCT `col` FROM (SELECT * FROM `tb_name` ORDER BY `time` DESC) AS a</code>。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
+  <a class="article-category-link" href="/categories/实战经验/">实战经验</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/mysql/">mysql</a>
   </div>
 
 </div>
@@ -123,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/05/01/hexo_desc/" data-title="hexo命令教程 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/01/17/DISTINCT_ORDER_BY排序问题/" data-title="DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -137,13 +132,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/05/01/md_intro/" title="markdown简易文档">
+ <a href="/2015/02/21/css常见问题/" title="css常用填坑代码">
   <strong>上一篇：</strong><br/>
   <span>
-  markdown简易文档</span>
+  css常用填坑代码</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2014/12/12/md_intro/"  title="markdown简易文档">
+ <strong>下一篇：</strong><br/> 
+ <span>markdown简易文档
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -155,7 +158,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo_项目部署到_github_上"><span class="toc-number">1.</span> <span class="toc-text">hexo 项目部署到 github 上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用复合命令"><span class="toc-number">2.</span> <span class="toc-text">常用复合命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简写"><span class="toc-number">3.</span> <span class="toc-text">简写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-number">4.</span> <span class="toc-text">常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jacman文章语法"><span class="toc-number">5.</span> <span class="toc-text">jacman文章语法</span></a></li></ol>
+ 
  
   </div>
 
@@ -169,11 +172,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/实战经验/" title="实战经验">实战经验<sup>1</sup></a></li>
+			<li><a href="/categories/实战经验/" title="实战经验">实战经验<sup>3</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>3</sup></a></li>
+			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>4</sup></a></li>
 		  
 		
 		</ul>
@@ -190,6 +193,14 @@
 			
 		
 			
+				<li><a href="/tags/memcache/" title="memcache">memcache<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/php/" title="php">php<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
 			
 		
@@ -199,6 +210,10 @@
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/css/" title="css">css<sup>1</sup></a></li>
 			
 		
 		</ul>

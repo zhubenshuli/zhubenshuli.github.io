@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog</title>
+    <title>css常用填坑代码 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="DISTINCT ORDER BY 排序问题...">
+    <meta name="description" content="css常用填坑代码...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DISTINCT ORDER BY 排序问题">
-<meta property="og:url" content="http://yoursite.com/2015/05/10/DISTINCT_ORDER_BY排序问题/index.html">
+<meta property="og:title" content="css常用填坑代码">
+<meta property="og:url" content="http://yoursite.com/2015/02/21/css常见问题/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="DISTINCT ORDER BY 排序问题...">
+<meta property="og:description" content="css常用填坑代码...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DISTINCT ORDER BY 排序问题">
-<meta name="twitter:description" content="DISTINCT ORDER BY 排序问题...">
+<meta name="twitter:title" content="css常用填坑代码">
+<meta name="twitter:description" content="css常用填坑代码...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/10/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">DISTINCT ORDER BY 排序问题</a>
+      <a href="/2015/02/21/css常见问题/" title="css常用填坑代码" itemprop="url">css常用填坑代码</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-10T13:27:00.000Z" itemprop="datePublished"> 发表于 2015-05-10</time>
+    <time datetime="2015-02-21T13:15:00.000Z" itemprop="datePublished"> 发表于 2015-02-21</time>
     
   </p>
 </header>
@@ -91,25 +91,29 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#文字换行"><span class="toc-number">1.</span> <span class="toc-text">文字换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框"><span class="toc-number">2.</span> <span class="toc-text">去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#省略号"><span class="toc-number">3.</span> <span class="toc-text">省略号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#投影"><span class="toc-number">4.</span> <span class="toc-text">投影</span></a></li></ol>
 		
 		</div>
 		
-		<p>使用类似<code>SELECT DISTINCT `col` FROM `tb_name` ORDER BY `time` DESC</code>这样的sql语句时，会遇到排序问题。<br>以上面的sql语句分析：<code>order by</code>只是针对了获取到的<code>col</code>进行了时间排序，而取到的<code>col</code>则是系统默认排序的。<br>想要<code>order by</code>起效果，应该使用子查询，<code>SELECT DISTINCT `col` FROM (SELECT * FROM `tb_name` ORDER BY `time` DESC) AS a</code>。</p>
-  
+		<p>记录自己平常经常使用的css语法</p>
+<a id="more"></a>
+<h3 id="文字换行">文字换行</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*强制不换行*/</span></span><br><span class="line"><span class="rule"><span class="attribute">white-space</span>:<span class="value">nowrap</span></span>;</span><br><span class="line"><span class="comment">/*自动换行*/</span></span><br><span class="line"><span class="rule"><span class="attribute">word-wrap</span>:<span class="value"> break-word</span></span>;</span><br><span class="line"><span class="rule"><span class="attribute">word-break</span>:<span class="value"> normal</span></span>;</span><br><span class="line"><span class="comment">/*强制英文单词断行*/</span></span><br><span class="line"><span class="rule"><span class="attribute">word-break</span>:<span class="value">break-all</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框">去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">input</span>,<span class="tag">button</span>,<span class="tag">select</span>,<span class="tag">textarea</span><span class="rules">&#123; <span class="rule"><span class="attribute">outline</span>:<span class="value">none</span></span>;&#125;</span></span><br><span class="line"><span class="tag">textarea</span><span class="rules">&#123; <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">13px</span></span></span>; <span class="rule"><span class="attribute">resize</span>:<span class="value">none</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="省略号">省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">white-space</span>:<span class="value">nowrap</span></span>;<span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;<span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="投影">投影</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">box-shadow</span>:<span class="value">inset <span class="number">1px</span> -<span class="number">1px</span> <span class="number">0</span> <span class="hexcolor">#f1f1f1</span></span></span>;<span class="rule"><span class="attribute">text-shadow</span>:<span class="value"><span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="hexcolor">#630</span></span></span>;</span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/实战经验/">实战经验</a>
+  <a class="article-category-link" href="/categories/文档教程/">文档教程</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/mysql/">mysql</a>
+  <span></span> <a href="/tags/css/">css</a>
   </div>
 
 </div>
@@ -118,7 +122,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/05/10/DISTINCT_ORDER_BY排序问题/" data-title="DISTINCT ORDER BY 排序问题 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/02/21/css常见问题/" data-title="css常用填坑代码 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -131,11 +135,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/04/07/html2canvas使用教程/" title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
+  <strong>上一篇：</strong><br/>
+  <span>
+  HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2015/05/07/html2canvas使用教程/"  title="HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片">
+<a href="/2015/01/17/DISTINCT_ORDER_BY排序问题/"  title="DISTINCT ORDER BY 排序问题">
  <strong>下一篇：</strong><br/> 
- <span>HTML2CANVAS插件对整个网页或者网页某一部分截图并保存为图片
+ <span>DISTINCT ORDER BY 排序问题
 </span>
 </a>
 </div>
@@ -150,7 +162,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#文字换行"><span class="toc-number">1.</span> <span class="toc-text">文字换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框"><span class="toc-number">2.</span> <span class="toc-text">去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#省略号"><span class="toc-number">3.</span> <span class="toc-text">省略号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#投影"><span class="toc-number">4.</span> <span class="toc-text">投影</span></a></li></ol>
  
   </div>
 
@@ -164,11 +176,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/实战经验/" title="实战经验">实战经验<sup>1</sup></a></li>
+			<li><a href="/categories/实战经验/" title="实战经验">实战经验<sup>3</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>3</sup></a></li>
+			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>4</sup></a></li>
 		  
 		
 		</ul>
@@ -185,6 +197,14 @@
 			
 		
 			
+				<li><a href="/tags/memcache/" title="memcache">memcache<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/php/" title="php">php<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
 			
 		
@@ -194,6 +214,10 @@
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/css/" title="css">css<sup>1</sup></a></li>
 			
 		
 		</ul>
