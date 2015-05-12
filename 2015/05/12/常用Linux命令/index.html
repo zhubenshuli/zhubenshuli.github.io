@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>markdown简易文档 | zhubenshuli&#39;s blog</title>
+    <title>linux常用命令 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="markdown简易文档...">
+    <meta name="description" content="linux常用...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown简易文档">
-<meta property="og:url" content="http://yoursite.com/2014/12/12/md_intro/index.html">
+<meta property="og:title" content="linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2015/05/12/常用Linux命令/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="markdown简易文档...">
+<meta property="og:description" content="linux常用...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown简易文档">
-<meta name="twitter:description" content="markdown简易文档...">
+<meta name="twitter:title" content="linux常用命令">
+<meta name="twitter:description" content="linux常用...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/12/md_intro/" title="markdown简易文档" itemprop="url">markdown简易文档</a>
+      <a href="/2015/05/12/常用Linux命令/" title="linux常用命令" itemprop="url">linux常用命令</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2014-12-12T13:15:00.000Z" itemprop="datePublished"> 发表于 2014-12-12</time>
+    <time datetime="2015-05-12T13:45:00.000Z" itemprop="datePublished"> 发表于 2015-05-12</time>
     
   </p>
 </header>
@@ -91,43 +91,24 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#超实用"><span class="toc-number">1.</span> <span class="toc-text">超实用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">2.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">4.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">5.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">6.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#强调"><span class="toc-number">7.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">8.</span> <span class="toc-text">列表</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
 		
 		</div>
 		
-		<p>记录自己平常经常使用的markdown语法</p>
+		<p>记录自己平常经常使用的linux命令…</p>
 <a id="more"></a>
-<h2 id="超实用">超实用</h2><p>换行：在结尾<strong>加两个空格</strong>后回车。<br>缩进：将输入法切换到<strong>全角</strong>，两个空格就是两个汉字的大小。<br>反引号问题: 如要表现反引号，在最外部使用两个反引号括起来。</p>
-<h2 id="标题">标题</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># h1</span></span><br><span class="line"><span class="preprocessor">## h2</span></span><br><span class="line"><span class="preprocessor">### h3</span></span><br><span class="line"><span class="preprocessor">#### h4</span></span><br><span class="line"><span class="preprocessor">##### h5</span></span><br><span class="line"><span class="preprocessor">###### h6</span></span><br></pre></td></tr></table></figure>
-<h2 id="代码">代码</h2><p>Use the <code>array_slice()</code> function<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Use</span> the `array_slice()` <span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure></p>
-<pre><code><span class="comment"><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code</span><br></pre></td></tr></table></figure></span>
-</code></pre><h2 id="表格">表格</h2><table>
-<thead>
-<tr>
-<th>th</th>
-<th>th</th>
-<th>th</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>td</td>
-<td>td</td>
-<td>td</td>
-</tr>
-<tr>
-<td>td</td>
-<td>td</td>
-<td>td</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="localvars">|   th  |   th  |   th  |</span> </span><br><span class="line">|-------|-------|-------|</span><br><span class="line"><span class="localvars">|   td  |   td  |   td  |</span></span><br><span class="line"><span class="localvars">|   td  |   td  |   td  |</span></span><br></pre></td></tr></table></figure>
-<h2 id="链接">链接</h2><p><a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br><a href="http://www.baidu.com" title="baidu.com" target="_blank" rel="external">百度</a><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">http:</span>//<span class="attribute">www.baidu.com</span>&gt;</span></span></span><br><span class="line">[<span class="link_label">百度</span>](<span class="link_url">http://www.baidu.com "baidu.com"</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="分割线">分割线</h2><hr>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">----------------------------------</span></span><br></pre></td></tr></table></figure>
-<h2 id="强调">强调</h2><p><em>斜体</em><br><strong>加粗</strong><br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">*</span>斜体<span class="keyword">*</span></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>加粗<span class="keyword">*</span><span class="keyword">*</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="列表">列表</h2><p>非排序列表<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="property">item</span></span><br><span class="line">* <span class="property">item</span></span><br><span class="line">* <span class="property">item</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="系统">系统</h3><p>1.显示系统运行信息:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uptime</span></span><br></pre></td></tr></table></figure></p>
+<p>2.查看磁盘空间信息:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">df</span> -hl</span><br></pre></td></tr></table></figure></p>
+<p>3.查看端口使用情况:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">netstat</span> -apn</span><br></pre></td></tr></table></figure></p>
+<h3 id="软件">软件</h3><p>1.移除软件包和配置文件:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> purge 软件名</span><br></pre></td></tr></table></figure></p>
+<p>2.获取包的相关信息:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="operator"><span class="keyword">cache</span> <span class="keyword">show</span> 包名</span></span><br></pre></td></tr></table></figure></p>
+<p>3.apache错误日志位置:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">var</span>/<span class="keyword">log</span>/apache2/<span class="keyword">error</span>.<span class="literal">log</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="用户">用户</h3><p>1.修改用户密码:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd 用户名     (用户名为空表示启用<span class="literal">root</span>，即修改<span class="literal">root</span>密码)</span><br></pre></td></tr></table></figure></p>
+<p>2.增加用户:<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser 用户名    <span class="comment">(在/home目录下添加一个用户目录)</span></span><br><span class="line">sudo useradd 用户名    <span class="comment">(不会添加用户目录)</span></span><br></pre></td></tr></table></figure></p>
+<p>3.删除用户:<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo userdel 用户名    <span class="comment">(参数-r会彻底删除用户相关数据)</span></span><br></pre></td></tr></table></figure></p>
+<p>4.查看所有用户:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="regexp">/etc/</span>passed</span><br></pre></td></tr></table></figure></p>
+<h3 id="文件">文件</h3><p>1.更改文件所有者:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chown</span> -R 用户名 文件或目录;</span><br></pre></td></tr></table></figure></p>
+<p>2.更改文件夹/文件名:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">mv</span> 修改前文件名 修改后文件名;</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -141,7 +122,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/markdown/">markdown</a>
+  <span></span> <a href="/tags/linux/">linux</a>
   </div>
 
 </div>
@@ -150,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2014/12/12/md_intro/" data-title="markdown简易文档 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/05/12/常用Linux命令/" data-title="linux常用命令 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -163,19 +144,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/01/17/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题">
-  <strong>上一篇：</strong><br/>
-  <span>
-  DISTINCT ORDER BY 排序问题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/12/05/hexo_desc/"  title="hexo命令教程">
+<a href="/2015/05/11/php二维数组多字段排序/"  title="php二维数组多字段排序">
  <strong>下一篇：</strong><br/> 
- <span>hexo命令教程
+ <span>php二维数组多字段排序
 </span>
 </a>
 </div>
@@ -190,7 +163,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#超实用"><span class="toc-number">1.</span> <span class="toc-text">超实用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">2.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">4.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">5.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">6.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#强调"><span class="toc-number">7.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">8.</span> <span class="toc-text">列表</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
  
   </div>
 
