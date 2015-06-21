@@ -91,25 +91,27 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
 		
 		</div>
 		
 		<p>记录自己平常经常使用的linux命令…</p>
 <a id="more"></a>
-<h3 id="系统">系统</h3><p>1.显示系统运行信息:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uptime</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="系统">系统</h2><p>1.显示系统运行信息:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uptime</span></span><br></pre></td></tr></table></figure></p>
 <p>2.查看磁盘空间信息:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">df</span> -hl</span><br></pre></td></tr></table></figure></p>
 <p>3.查看端口使用情况:<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -apn</span><br><span class="line">netstap -noap <span class="string">| grep 端口号</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="软件">软件</h3><p>1.移除软件包和配置文件:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> purge 软件名</span><br></pre></td></tr></table></figure></p>
+<h2 id="软件">软件</h2><p>1.移除软件包和配置文件:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> purge 软件名</span><br></pre></td></tr></table></figure></p>
 <p>2.获取包的相关信息:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="operator"><span class="keyword">cache</span> <span class="keyword">show</span> 包名</span></span><br></pre></td></tr></table></figure></p>
 <p>3.apache错误日志位置:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">var</span>/<span class="keyword">log</span>/apache2/<span class="keyword">error</span>.<span class="literal">log</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="用户">用户</h3><p>1.修改用户密码:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd 用户名     (用户名为空表示启用<span class="literal">root</span>，即修改<span class="literal">root</span>密码)</span><br></pre></td></tr></table></figure></p>
+<h2 id="用户">用户</h2><p>1.修改用户密码:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd 用户名     (用户名为空表示启用<span class="literal">root</span>，即修改<span class="literal">root</span>密码)</span><br></pre></td></tr></table></figure></p>
 <p>2.增加用户:<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser 用户名    <span class="comment">(在/home目录下添加一个用户目录)</span></span><br><span class="line">sudo useradd 用户名    <span class="comment">(不会添加用户目录)</span></span><br></pre></td></tr></table></figure></p>
 <p>3.删除用户:<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo userdel 用户名    <span class="comment">(参数-r会彻底删除用户相关数据)</span></span><br></pre></td></tr></table></figure></p>
 <p>4.查看所有用户:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="regexp">/etc/</span>passed</span><br></pre></td></tr></table></figure></p>
-<h3 id="文件">文件</h3><p>1.更改文件所有者:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chown</span> -R 用户名 文件或目录;</span><br></pre></td></tr></table></figure></p>
+<h2 id="文件">文件</h2><p>1.更改文件所有者:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chown</span> -R 用户名 文件或目录;</span><br></pre></td></tr></table></figure></p>
 <p>2.更改文件夹/文件名:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">mv</span> 修改前文件名 修改后文件名;</span><br></pre></td></tr></table></figure></p>
 <p>3.更改文件权限<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">chmod</span> <span class="number">777</span> 文件名</span><br></pre></td></tr></table></figure></p>
+<p>4.解压文件<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tar –xvf file<span class="class">.tar</span> <span class="comment">//解压 tar包</span></span><br><span class="line">tar -xzvf file<span class="class">.tar</span><span class="class">.gz</span> <span class="comment">//解压tar.gz</span></span><br><span class="line">tar -xjvf file<span class="class">.tar</span><span class="class">.bz2</span>   <span class="comment">//解压 tar.bz2</span></span><br><span class="line">tar –xZvf file<span class="class">.tar</span><span class="class">.Z</span>   <span class="comment">//解压tar.Z</span></span><br><span class="line">unrar e file<span class="class">.rar</span> <span class="comment">//解压rar</span></span><br><span class="line">unzip file<span class="class">.zip</span> <span class="comment">//解压zip</span></span><br></pre></td></tr></table></figure></p>
+<p>5.查找文件<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -<span class="property">name</span> php.ini</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -172,7 +174,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件"><span class="toc-number">2.</span> <span class="toc-text">软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户"><span class="toc-number">3.</span> <span class="toc-text">用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a></li></ol>
  
   </div>
 
@@ -190,7 +192,7 @@
 		  
 		
 		  
-			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>7</sup></a></li>
+			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>8</sup></a></li>
 		  
 		
 		</ul>
@@ -220,6 +222,10 @@
 		
 			
 				<li><a href="/tags/php/" title="php">php<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/redis/" title="redis">redis<sup>1</sup></a></li>
 			
 		
 			
