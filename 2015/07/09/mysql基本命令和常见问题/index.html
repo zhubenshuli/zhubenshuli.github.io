@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>phpredis事务 | zhubenshuli&#39;s blog</title>
+    <title>mysql基本命令和常见问题 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="phpredis事务的调用...">
+    <meta name="description" content="mysql基本命令和常见问题...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="phpredis事务">
-<meta property="og:url" content="http://yoursite.com/2015/06/21/phpredis事务/index.html">
+<meta property="og:title" content="mysql基本命令和常见问题">
+<meta property="og:url" content="http://yoursite.com/2015/07/09/mysql基本命令和常见问题/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="phpredis事务的调用...">
+<meta property="og:description" content="mysql基本命令和常见问题...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="phpredis事务">
-<meta name="twitter:description" content="phpredis事务的调用...">
+<meta name="twitter:title" content="mysql基本命令和常见问题">
+<meta name="twitter:description" content="mysql基本命令和常见问题...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/21/phpredis事务/" title="phpredis事务" itemprop="url">phpredis事务</a>
+      <a href="/2015/07/09/mysql基本命令和常见问题/" title="mysql基本命令和常见问题" itemprop="url">mysql基本命令和常见问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-21T01:56:00.000Z" itemprop="datePublished"> 发表于 2015-06-21</time>
+    <time datetime="2015-07-09T14:23:00.000Z" itemprop="datePublished"> 发表于 2015-07-09</time>
     
   </p>
 </header>
@@ -91,14 +91,20 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行登录"><span class="toc-number">1.</span> <span class="toc-text">命令行登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入"><span class="toc-number">2.</span> <span class="toc-text">导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清空表"><span class="toc-number">3.</span> <span class="toc-text">清空表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测字符集问题"><span class="toc-number">4.</span> <span class="toc-text">检测字符集问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql常见问题"><span class="toc-number">5.</span> <span class="toc-text">mysql常见问题</span></a></li></ol>
 		
 		</div>
 		
-		<p>phpredis事务的调用有两种模式：<code>Redis::MULTI</code>和<code>Redis::PIPILINE</code>，默认是<code>Redis::MULTI</code>模式，相比于默认模式，<code>Redis::PIPELINE</code>管道模式速度更快，但没有保证原子性，有可能造成数据的丢失。</p>
+		<p>记录自己平常经常使用的mysql基本命令和常见问题…</p>
 <a id="more"></a>
-<p>实例：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$redis</span> = <span class="keyword">new</span> Redis();</span><br><span class="line"><span class="variable">$redis</span>-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br><span class="line"><span class="variable">$redis</span>-&gt;select(<span class="number">25</span>);</span><br><span class="line"><span class="variable">$pipe</span> = <span class="variable">$redis</span>-&gt;multi(Redis::PIPELINE);</span><br><span class="line"></span><br><span class="line"><span class="variable">$uids</span> = <span class="keyword">array</span>(<span class="number">1001</span>, <span class="number">1002</span>, <span class="number">1003</span>, <span class="number">1004</span>, <span class="number">1005</span>);</span><br><span class="line"><span class="keyword">foreach</span>(<span class="variable">$uids</span> <span class="keyword">as</span> <span class="variable">$v</span>) &#123;</span><br><span class="line">    <span class="variable">$pipe</span>-&gt;hGetAll(<span class="string">"user:uid:"</span> . <span class="variable">$v</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$replies</span> = <span class="variable">$pipe</span>-&gt;exec();</span><br><span class="line"><span class="variable">$pipe</span>-&gt;discard();</span><br><span class="line"></span><br><span class="line"><span class="variable">$userinfo</span> = array_combine(<span class="variable">$uids</span>, <span class="variable">$replies</span>);</span><br></pre></td></tr></table></figure></p>
-<p>管道执行之后返回的数组是按照命令执行的顺序排列的，可以使用<code>array_combine</code>进行数据的组合。</p>
+<h2 id="命令行登录">命令行登录</h2><p><code>mysql -h主机地址 -u用户名 -p用户密码</code></p>
+<h2 id="导入">导入</h2><p><code>source E:/a.sql</code></p>
+<h2 id="清空表">清空表</h2><p><code>truncate table mytable</code></p>
+<h2 id="检测字符集问题">检测字符集问题</h2><p><code>show variables like &#39;char%&#39;</code></p>
+<h2 id="mysql常见问题">mysql常见问题</h2><ul>
+<li>导入数据提示<code>MySQL server has gone away</code><br>  在my.ini/my.cnf中修改<code>max_allowed_pocket</code></li>
+<li>导入数据提示<code>Unknown command &#39;\n&#39;</code><br>  出现这种错误一般是由于备份数据的字符集和恢复时使用的字符集不一致所致, 命令行登录时: <code>mysql -uroot -p --default-character-set=utf8</code></li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -112,7 +118,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/redis/">redis</a>
+  <span></span> <a href="/tags/mysql/">mysql</a>
   </div>
 
 </div>
@@ -121,7 +127,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/06/21/phpredis事务/" data-title="phpredis事务 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/07/09/mysql基本命令和常见问题/" data-title="mysql基本命令和常见问题 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,19 +140,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/09/mysql基本命令和常见问题/" title="mysql基本命令和常见问题">
-  <strong>上一篇：</strong><br/>
-  <span>
-  mysql基本命令和常见问题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/06/20/crontab定时任务/"  title="crontab 定时任务">
+<a href="/2015/06/21/phpredis事务/"  title="phpredis事务">
  <strong>下一篇：</strong><br/> 
- <span>crontab 定时任务
+ <span>phpredis事务
 </span>
 </a>
 </div>
@@ -161,7 +159,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行登录"><span class="toc-number">1.</span> <span class="toc-text">命令行登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入"><span class="toc-number">2.</span> <span class="toc-text">导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清空表"><span class="toc-number">3.</span> <span class="toc-text">清空表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测字符集问题"><span class="toc-number">4.</span> <span class="toc-text">检测字符集问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql常见问题"><span class="toc-number">5.</span> <span class="toc-text">mysql常见问题</span></a></li></ol>
  
   </div>
 
