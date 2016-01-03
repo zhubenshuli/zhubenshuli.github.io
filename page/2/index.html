@@ -77,6 +77,66 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/01/17/DISTINCT_ORDER_BY排序问题/" title="DISTINCT ORDER BY 排序问题" itemprop="url">DISTINCT ORDER BY 排序问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
+		
+  <p class="article-time">
+    <time datetime="2015-01-17T13:27:00.000Z" itemprop="datePublished"> 发表于 2015-01-17</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>使用类似<code>SELECT DISTINCT `col` FROM `tb_name` ORDER BY `time` DESC</code>这样的sql语句时，会遇到排序问题。<br>以上面的sql语句分析：<code>order by</code>只是针对了获取到的<code>col</code>进行了时间排序，而取到的<code>col</code>则是系统默认排序的。<br>想要<code>order by</code>起效果，应该使用子查询，<code>SELECT DISTINCT `col` FROM (SELECT * FROM `tb_name` ORDER BY `time` DESC) AS a</code>。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/实战经验/">实战经验</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/mysql/">mysql</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2014/12/12/md_intro/" title="markdown简易文档" itemprop="url">markdown简易文档</a>
   </h1>
   <p class="article-author">By
@@ -215,7 +275,7 @@
 		  
 		
 		  
-			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>9</sup></a></li>
+			<li><a href="/categories/文档教程/" title="文档教程">文档教程<sup>10</sup></a></li>
 		  
 		
 		</ul>
@@ -228,7 +288,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>3</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>4</sup></a></li>
 			
 		
 			
@@ -315,7 +375,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
 		
 		<a href="/about" target="_blank" title="zhubenshuli">zhubenshuli</a>
 		

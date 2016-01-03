@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>phpredis事务 | zhubenshuli&#39;s blog</title>
+    <title>linux安装问题集合 | zhubenshuli&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="zhubenshuli">
     
 
     
-    <meta name="description" content="phpredis事务的调用...">
+    <meta name="description" content="linux安装问题集合...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="phpredis事务">
-<meta property="og:url" content="http://yoursite.com/2015/06/21/phpredis事务/index.html">
+<meta property="og:title" content="linux安装问题集合">
+<meta property="og:url" content="http://yoursite.com/2016/01/03/ubuntu安装问题集合/index.html">
 <meta property="og:site_name" content="zhubenshuli's blog">
-<meta property="og:description" content="phpredis事务的调用...">
+<meta property="og:description" content="linux安装问题集合...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="phpredis事务">
-<meta name="twitter:description" content="phpredis事务的调用...">
+<meta name="twitter:title" content="linux安装问题集合">
+<meta name="twitter:description" content="linux安装问题集合...">
 
     
     <link rel="alternative" href="/atom.xml" title="zhubenshuli&#39;s blog" type="application/atom+xml">
@@ -75,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/21/phpredis事务/" title="phpredis事务" itemprop="url">phpredis事务</a>
+      <a href="/2016/01/03/ubuntu安装问题集合/" title="linux安装问题集合" itemprop="url">linux安装问题集合</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="zhubenshuli" target="_blank" itemprop="author">zhubenshuli</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-21T01:56:00.000Z" itemprop="datePublished"> 发表于 2015-06-21</time>
+    <time datetime="2016-01-03T11:32:00.000Z" itemprop="datePublished"> 发表于 2016-01-03</time>
     
   </p>
 </header>
@@ -91,14 +91,13 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#detect_and_nount_cd-rom"><span class="toc-number">1.</span> <span class="toc-text">detect and nount cd-rom</span></a></li></ol>
 		
 		</div>
 		
-		<p>phpredis事务的调用有两种模式：<code>Redis::MULTI</code>和<code>Redis::PIPILINE</code>，默认是<code>Redis::MULTI</code>模式，相比于默认模式，<code>Redis::PIPELINE</code>管道模式速度更快，但没有保证原子性，有可能造成数据的丢失。</p>
+		<p>记录自己平常安装linux时遇到的各种问题…</p>
 <a id="more"></a>
-<p>实例：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$redis</span> = <span class="keyword">new</span> Redis();</span><br><span class="line"><span class="variable">$redis</span>-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br><span class="line"><span class="variable">$redis</span>-&gt;select(<span class="number">25</span>);</span><br><span class="line"><span class="variable">$pipe</span> = <span class="variable">$redis</span>-&gt;multi(Redis::PIPELINE);</span><br><span class="line"></span><br><span class="line"><span class="variable">$uids</span> = <span class="keyword">array</span>(<span class="number">1001</span>, <span class="number">1002</span>, <span class="number">1003</span>, <span class="number">1004</span>, <span class="number">1005</span>);</span><br><span class="line"><span class="keyword">foreach</span>(<span class="variable">$uids</span> <span class="keyword">as</span> <span class="variable">$v</span>) &#123;</span><br><span class="line">    <span class="variable">$pipe</span>-&gt;hGetAll(<span class="string">"user:uid:"</span> . <span class="variable">$v</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$replies</span> = <span class="variable">$pipe</span>-&gt;exec();</span><br><span class="line"><span class="variable">$pipe</span>-&gt;discard();</span><br><span class="line"></span><br><span class="line"><span class="variable">$userinfo</span> = array_combine(<span class="variable">$uids</span>, <span class="variable">$replies</span>);</span><br></pre></td></tr></table></figure></p>
-<p>管道执行之后返回的数组是按照命令执行的顺序排列的，可以使用<code>array_combine</code>进行数据的组合。</p>
+<h2 id="detect_and_nount_cd-rom">detect and nount cd-rom</h2><p>mkdir /usb<br>mount -t vfat /dev/sdb1 /usb<br>mkdir /cdrom<br>mount -t iso9660 -o loop /usb/isos/xx.iso /cdrom</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -112,7 +111,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/redis/">redis</a>
+  <span></span> <a href="/tags/linux/">linux</a>
   </div>
 
 </div>
@@ -121,7 +120,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/06/21/phpredis事务/" data-title="phpredis事务 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/01/03/ubuntu安装问题集合/" data-title="linux安装问题集合 | zhubenshuli&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,19 +133,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/09/mysql基本命令和常见问题/" title="mysql基本命令和常见问题">
-  <strong>上一篇：</strong><br/>
-  <span>
-  mysql基本命令和常见问题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/06/20/crontab定时任务/"  title="crontab 定时任务">
+<a href="/2015/07/09/mysql基本命令和常见问题/"  title="mysql基本命令和常见问题">
  <strong>下一篇：</strong><br/> 
- <span>crontab 定时任务
+ <span>mysql基本命令和常见问题
 </span>
 </a>
 </div>
@@ -161,7 +152,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#detect_and_nount_cd-rom"><span class="toc-number">1.</span> <span class="toc-text">detect and nount cd-rom</span></a></li></ol>
  
   </div>
 
